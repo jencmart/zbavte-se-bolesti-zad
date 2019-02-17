@@ -1,0 +1,141 @@
+{% extends 'layout.html.twig' %}
+{%  set menu_name = 'sm-system' %}
+
+{% set page_name = 'SM Systém' %}
+{% block title %} {{ page_name }} {% endblock %}
+
+{% block structuredData %}
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Úvod",
+                "item": "https://www.zbavtesebolestizad.cz"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "SM Systém",
+                "item": "https://www.zbavtesebolestizad.cz/sm-system"
+            }]
+        }
+    </script>
+{% endblock %}
+
+{% block content %}
+    <!----------- CONTENT ----------->
+
+    <section>
+        <!-- page image -->
+        <div class="page-header-sm">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="page-caption">
+                            <h2 class="page-title">{{ page_name }}</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- breadcrumb -->
+        <div class="page-breadcrumb">
+            <div class="container">
+                <div class="col-lg-12">
+                    <ol class="breadcrumb">
+                        <li><a href="{{ path('index') }}">Úvod</a></li>
+                        <li class="active">{{ page_name }}</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Article -->
+    <article>
+        <!-- main  -->
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                        <h1>Spirální stabilizace páteře</h1>
+                        <img src="/resources/images/top/explain.jpg" alt="" class="img-responsive mb30">
+
+                        <p class="lead">SM systém nabízí možnost řešení bolestí zad v krční, hrudní i bederní oblasti,
+                            skoliózy a výhřezů meziobratlových plotének cvičením, bez operací.
+                        </p>
+
+                        <h2>Co to je?</h2>
+                        <p>
+                            SM systém neboli „Stabilizace + Mobilizace páteře“, je unikátní metodou
+                            <a href="https://www.spiralstabilization.com/en/" target="_blank">MUDr. Richarda Smíška</a>,
+                            předního odborníka na léčbu a prevenci bolestí zad a autora originální metody
+                            SM - spirální stabilizace páteře.  Metoda je postavena na komplexním vyrovnávání
+                            svalových dysbalancí (zapojuje zkrácené svaly, zpevňuje potřebné ke správnému držení těla svaly,
+                            protahuje a narovnává páteř, odlehčuje zatížení velkých kloubů, regeneruje spirální svalový korzet)
+                            pomocí aktivních pohybů paží s využitím speciálních expandérů (elastických lan).
+                        </p>
+
+                        <img src="/resources/images/post/large/sm-1.jpg" class="alignleft mb30">
+
+                        <h2>Co jsou spirální svalové řetězce?</h2>
+                        <p>Jednoduše řečeno se jedná o široké pruhy svalů, které spirálně vedou od lopatek až k dolním končetinám.
+                            Proto se jim také říká svalové spirály. Díky jejich pozici samovolně protahují páteř
+                            (vyvíjí trakční síly v oblasti meziobratlových plotének). Na základě toho odlehčují permanentní
+                            vertikální zatížení, kterému je naše pohybové ústrojí vystaveno. Aktivace těchto řetězců nastává
+                            při pohybu paže a lopatky. Správná činností svalových spirál odlehčuje činnost vertikálních svalových řetězců.
+                            Díky tomu mají meziobratlové ploténky možnost vlastní rehabilitace. Mimo jiné svalové spirály
+                            umožňují páteři optimální pohyblivost a tím nepřímo ovlivňují i funkci vnitřních orgánů.</p>
+                        <img src="/resources/images/post/large/sm-2.jpg" class="alignleft mb30">
+
+                        <h2>Kdy nastává problém?</h2>
+                        <p>Správná činnost svalových spirál je podmíněna celou řadou faktorů jako  je pozice těla,
+                            koordinace pohybu, použitá síla či vhodný rozsah pohybu. Během našeho života máme tendenci
+                            naučit naše tělo používat vertikální svalové řetězce ke stabilizaci. Je to dáno především
+                            sedavým způsobem života, ale může se jednat i o důsledek jednostranného přetěžování fyzického
+                            aparátu, např. při sportu. Následně se naše tělo dostává do poloh, kde není možné tyto řetězce
+                            aktivovat, což vede k jejich postupnému ochabování.</p>
+
+                        <img src="/resources/images/post/large/sm-3.jpg" class="alignleft mb30">
+
+                        <h2>Pro koho je cvičení vhodné a čemu může pomoci?</h2>
+                        <p>Tato metoda a cvičení jsou vhodná pro jakoukoliv věkovou kategorii, pro každého, kdo má zájem
+                            pečovat o své zdraví. Děti, ženy, muži, senioři, sportovci  a  všichni, koho trápí problémy
+                            bolesti zad nebo ti, kteří daným problémům s páteři chtějí předejít. Pomocí metody SM systém
+                            lze řešit také problémy a hlavně jejich prevenci u velkých kloubů (kyčelního, ramenního a kolenního)
+                            a klenby nožní. Co se týče sportovců, daná metoda se zabývá  také kondiční přípravou  všech
+                            výkonnostních úrovní, což vede ke zlepšení  výkonu sportovců a předchází  degeneraci a
+                            přetížení páteře a  kloubů při sportování.</p>
+
+                        <img src="/resources/images/post/large/sm-4.jpg" class="alignleft mb30">
+
+
+                        <h2>Jak může SM Systém pomoci?</h2>
+                        <p>Účinnost  metody spočívá v pravidelném cvičení (ссa. 10 minut denně). Cvičením cíleně aktivujeme
+                            spirálové svalové řetězce. Dosáhneme toho především správným držením těla a vhodným rozsahem pohybu končetin.
+                            Postupně naučíme mozek volbě optimálního způsobu stabilizace a tím  i správnému  a zdravému pohybu.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <div class="space-small bg-primary">
+        <!-- call to action -->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-sm-8 col-md-8 col-xs-12">
+                    <h1 class="cta-title">Zaujalo Vás to?</h1>
+                    <p class="cta-text">Přečtěte jak probíhá individuální terapie, co je pro ni potřeba a jak Vám může pomoci.</p>
+                </div>
+                <div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
+                    <a href="{{ path('sm-individual') }}" class="btn btn-white btn-lg mt20">Číst více</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!----------- END CONTENT ----------->
+{% endblock %}

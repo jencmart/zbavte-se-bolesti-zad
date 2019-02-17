@@ -1,0 +1,87 @@
+{% extends 'layout.html.twig' %}
+{%  set menu_name = 'info' %}
+
+{% set page_name = 'O mně' %}
+{% block title %} {{ page_name }} {% endblock %}
+
+
+{% block structuredData %}
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Úvod",
+                "item": "https://www.zbavtesebolestizad.cz"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "O mně",
+                "item": "https://www.zbavtesebolestizad.cz/o-mne"
+            }]
+        }
+    </script>
+{% endblock %}
+
+{% block content %}
+    <!----------- CONTENT ----------->
+    <section>
+        <!-- page image -->
+        <div class="page-header-about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="page-caption">
+                            <h2 class="page-title">{{ page_name }}</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- breadcrumb -->
+        <div class="page-breadcrumb">
+            <div class="container">
+                <div class="col-lg-12">
+                    <ol class="breadcrumb">
+                        <li><a href="{{ path('index') }}">Úvod</a></li>
+                        <li class="active">{{ page_name }}</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Article -->
+    <article>
+        <!-- main  -->
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                        <h1>Terapeutka Mgr. Jarmila Helebrantová</h1>
+                        <img src="/resources/images/top/sm-rope-help.jpg" alt="" class="img-responsive mb30">
+
+                        <p>Od dětství jsem se věnovala různým sportům, pohybu a cvičení, mimo jiné jsem pracovala také  jako učitelka tělesné výchovy. Mám ráda cvičení a práci s lidmi, tak jsem se v roce 2002 lety dostala i k cvičitelské práci. Zpočátku to bylo v oblasti společenského tance a kondičního cvičení. Zkušenosti a hlavně různé pohybové problémy cvičenců mě přivedly k tomu, že jsem se začala více zajímat o zdravé formy cvičení, kompenzační cvičení a zdravotní tělesnou výchovu. V tomto oboru jsem se seznámila také s MUDr. Richardem Smíškem a jeho metodou  SM systém - spirální stabilizace páteře. Tato metoda mě natolik zaujala, že jsem se jí začala aktivně věnovat a stále si rozšiřovat kvalifikaci pohybového terapeuta.
+                        </p>
+
+                        <h2>Cvičitelská kvalifikace</h2>
+                        <ul>
+                            <li>Terapeut metody SM Systém</li>
+                            <li>Cvičitel všestrannosti III.třídy</li>
+                            <li>Instruktor zdravotní tělesné výchovy II.třídy</li>
+                            <li>Kurzy v rehabilitačním centru Smíšek – SM systém (manuální techniky, skoliozy dětí, skoliozy dospělých, poruchy páteře v bederní krajině, výhřez disku v krční a hrudní krajině, pletenec ramenní, pletenec pánevní, vertebroviscerální vztahy, svalové řetězce)</li>
+                            <li>Trenér  zdravotní tělesné výchovy</li>
+                            <li>Port de bras instruktor I. a II. třídy</li>
+                            <li>Instruktor Pilates</li>
+                            <li>Instruktor fitness – osobní trenér</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    <!----------- END CONTENT ----------->
+{% endblock %}

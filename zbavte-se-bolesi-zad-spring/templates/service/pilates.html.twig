@@ -1,0 +1,141 @@
+{% extends 'layout.html.twig' %}
+{%  set menu_name = 'nabidka' %}
+
+{% set page_name = 'Pilates' %}
+{% block title %} {{ page_name }} {% endblock %}
+
+{% block additional_js %}
+    <script src="/resources/js/filter.js"></script>
+{%  endblock %}
+
+{% block structuredData %}
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Úvod",
+                "item": "https://www.zbavtesebolestizad.cz"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Nabídka",
+                "item": "https://www.zbavtesebolestizad.cz/nabidka"
+            },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Pilates",
+                "item": "https://www.zbavtesebolestizad.cz/nabidka/pilates"
+            }]
+        }
+    </script>
+{% endblock %}
+
+{% block content %}
+    <section>
+        <!-- page image -->
+        <div class="page-header-services-workout">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="page-caption">
+                            <h2 class="page-title">{{ page_name }}</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- breadcrumb -->
+        <div class="page-breadcrumb">
+            <div class="container">
+                <div class="col-lg-12">
+                    <ol class="breadcrumb">
+                        <li><a href="{{ path('index') }}">Úvod</a></li>
+                        <li><a href="{{ path('services') }}">Nabídka</a></li>
+                        <li class="active">{{ page_name }}</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-------------- Main article ------------------------------------------------------------------------------------->
+    <!----------------------------------------------------------------------------------------------------------------->
+
+    <article>
+        <!-- CONTENT -->
+        <div class="content">
+            <!-- CONTAINER -->
+            <div class="container">
+
+                <!-- ROW -->
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                        <h1>Cvičte s námi Pilates</h1>
+                        <img src="/resources/images/top/pilates-1.jpg" alt="" class="img-responsive mb30">
+
+                        <h2>O co se jedná?</h2>
+                        <p>Skupinové lekce, cvičení malých skupinách, cílem tohoto cvičení je pohyb vycházející ze silného a pevného středu těla, důraz je kladen na zpevnění hlubokých břišních svalů. Při dodržení principů Pilates (koncentrace, pevný střed těla, dýchání….) se jedná o velmi efektivní cvičení., které zpevní a vytvaruje tělo.</p>
+
+
+                        <h2> Cena </h2>
+                        <ul>
+                            <li>jedna lekce (1 x 50 minut) 100Kč</li>
+                            <li>pernamentka (10 x 50 minut, časově neomezená & přenosná) 800Kč</li>
+                        </ul>
+
+                        <h2>Kde to je?</h2>
+                        <p>
+                            <a href="http://zdravotnitelocvik.cz/informace-pro-klienty/" target="_blank">Centru zdravotního tělocviku: Ottova 155, 269 01 Rakovník</a>
+                        </p>
+                        <p></p>
+
+                        <div>
+                            <h2>Rozvrh hodin v Centru zdravého tělocviku</h2>
+                            <p>Pokud chcete mít jistotu, že je volno, volejte na: <strong>+420 602 162 248</strong></p>
+                            <!-- <div class="accent-cyan-gradient"></div> -->
+
+
+                            {% include 'calendar.html.twig' %}
+
+                        </div>
+                        <div class="mb30"></div>
+                        <h2>Centrum zdravého tělocviku</h2>
+                        <img src="/resources/images/post/large/workout-else-1.jpg"  class="alignleft mb30">
+                        <img src="/resources/images/post/large/workout-else-2.jpg"  class="alignleft mb30">
+                    </div>
+
+                    <aside>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <div class="sidenav">
+                                <ul class="listnone">
+                                    <li> <a href="{{ path('sm-individual') }}">SM systém – Individuální terapie</a></li>
+                                    <li> <a href="{{ path('sm-group') }}">SM systém – Skupinové lekce</a></li>
+                                    <li> <a href="{{ path('massage') }}#muscle">Masáž na uvolnění svalového napětí</a></li>
+                                    <li> <a href="{{ path('massage') }}#indian">Tradiční Indická masáž hlavy</a></li>
+                                    <li> <a href="{{ path('massage') }}#musle">Masáž horkými mušlemi</a></li>
+                                    <li> <a href="{{ path('massage') }}#anticel">Anticelulitidní masáž</a></li>
+                                    <li> <a href="{{ path('workout') }}">Zdravotní cvičení</a></li>
+                                    <li> <a href="{{ path('pilates') }}">Pilates</a></li>
+                                    <li> <a href="{{ path('coupons') }}">Dárkové kupony</a></li>
+                                </ul>
+                            </div>
+                            <div class="widget widget-call-to-action">
+                                <h1 class="widget-title">Zaujalo Vás to?</h1>
+                                <p class="text-white">Napište mi či zavolejte a můžeme si domluvit konzultaci.</p>
+                                <a href="{{ path('contact') }}" class="btn btn-white btn-lg">Kontakt</a>
+                            </div>
+
+                        </div>
+                    </aside>
+                </div>
+                <!-- ./ROW -->
+            </div>
+            <!-- ./CONTAINER -->
+        </div>
+        <!-- ./CONTENT -->
+    </article>
+{% endblock %}

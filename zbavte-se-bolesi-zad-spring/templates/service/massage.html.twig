@@ -1,0 +1,159 @@
+{% extends 'layout.html.twig' %}
+{%  set menu_name = 'nabidka' %}
+
+{% set page_name = 'Masáže' %}
+{% block title %} {{ page_name }} {% endblock %}
+
+{% block structuredData %}
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Úvod",
+                "item": "https://www.zbavtesebolestizad.cz"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Nabídka",
+                "item": "https://www.zbavtesebolestizad.cz/nabidka"
+            },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Masáže",
+                "item": "https://www.zbavtesebolestizad.cz/nabidka/masaze"
+            }]
+        }
+    </script>
+{% endblock %}
+
+{% block content %}
+    <section>
+        <!-- page image -->
+        <div class="page-header-services-massage">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="page-caption">
+                            <h2 class="page-title">{{ page_name }}</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- breadcrumb -->
+        <div class="page-breadcrumb">
+            <div class="container">
+                <div class="col-lg-12">
+                    <ol class="breadcrumb">
+                        <li><a href="{{ path('index') }}">Úvod</a></li>
+                        <li><a href="{{ path('services') }}">Nabídka</a></li>
+                        <li class="active">{{ page_name }}</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-------------- Main article ------------------------------------------------------------------------------------->
+    <!----------------------------------------------------------------------------------------------------------------->
+
+    <article>
+        <!-- CONTENT -->
+        <div class="content">
+            <!-- CONTAINER -->
+            <div class="container">
+
+                <!-- ROW -->
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                        <h1>Nabídka masáží</h1>
+                        <img src="/resources/images/top/massage-back.jpg" alt="" class="img-responsive mb30">
+
+                        <p class="lead">Kvalitní masáž by měla být součástí  péče o fyzické i duševní zdraví.</p>
+                        <p>Nabízím masáže ať už zdravotní se zaměřením na problémy které Vás trápí, či relaxační, které Vám pomohou uvolnit napětí a stres.</p>
+
+                        <h2 id="muscle">Masáž na uvolnění svalového napětí</h2>
+                        <img src="/resources/images/post/small/massage-muscle.jpg" alt="" class="img-responsive">
+                        <p></p>
+                        <p>Tato masáž je součástí individuální terapie SM systém, je zaměřená zejména na protažení zkrácených svalů a uvolnění jejich napětí. Provádí se na lehátku v závěsném systému, klient je po ní příjemně protažený a uvolněný.
+                            <br>Na masáž se lze objednat také samostatně.
+                            <br><strong>30min. / 350Kč</strong>
+                            <br><strong>60min. / 600Kč</strong></p>
+
+
+                        <h2 id="indian">Tradiční Indická masáž hlavy</h2>
+                        <img src="/resources/images/post/small/massage-indian.jpg" alt="" class="img-responsive">
+                        <p></p>
+                        <p>Příjemná   masáž, působí proti stresu a podporuje celkové uvolnění, velmi jemné a příjemné ošetření pokožky hlavy, obličeje, krku, ramen a horních částí paží .  Masáž zbavuje psychické únavy a přináší pocit vnitřní pohody.  Pomáhá při ztuhlosti krku, silném napětí , podrážděnosti a stresu. Působí příznivě na kvalitu  a růst vlasů, protože při masáži dochází k  prokrvení pokožky a tím i lepšímu okysličení a výživě.
+                            <br>Vhodné i jako dárek
+                            <br><strong>30min. / 350Kč</strong></p>
+
+
+                        <h2 id="musle">Masáž horkými mušlemi Lava Shells</h2>
+                        <img src="/resources/images/post/small/massage-musle.jpg" alt="" class="img-responsive">
+                        <p></p>
+                        <p>Jedná se o masáž, která  patří mezi luxusní péči. K masáži se používají  vápenaté schránky mořských měkkýšů, pocházejí z ostrovů jižního Pacifiku, z oblasti Filipín (mušle srdcovky), vybroušené a vyleštěné do vysokého lesku. Při masáži se využívá za studena lisovaný kokosový olej. Do mušle se vkládá jednorázový přírodní aktivátor, který celou mušli zahřívá. Tato samozahřívací technologie udrží příjemnou horkost ( 38-55°C) po celou dobu masáže.
+                            <br>Mušle mají hladký, tvrdý povrch bez pórů a jejich dotek působí na těle velmi luxusně. Masírují se záda, krk, paže  a dolní končetiny zezadu.
+                            <br>Masáž  a má výrazné regenerační a relaxační účinky pro tělo i mysl.
+                            <br>Vhodné jako dárek
+                            <br><strong>60min. / 850Kč jednou mušlí</strong>
+                            <br><strong>60min. / 950Kč dvěma mušlemi</strong></p>
+
+                        <h2 id="anticel">Anticelulitidní masáž</h2>
+                        <img src="/resources/images/post/small/massage-anticel.jpg" alt="" class="img-responsive">
+                        <p></p>
+                        <p>Představuje jeden z mála účinných způsobů v prevenci a v boji s celulitidou. Při masáži se využívají techniky, díky kterým dochází ke stimulaci podkožních struktur. Masáž se provádí na hýždích a stehnech a má pozitivní účinek na podkožní metabolismus, který pak zlepšuje vstřebávání tuku, regeneraci a vyhlazování kůže. Zároveň je potřeba určitá režimová opatření takže probereme  také stravovací a pohybové návyky, pitný režim a každodenní domácí ošetření  problémových partií pokožky.
+                            <br>Při masáži dojde nejprve k prohřátí příslušných partií, a pak k důkladné hloubkové masáži (nejedná se tedy o masáž relaxační), která je ukončena zábalem (skořicový, limetkový, kokosový, ozonový) při němž dojde k dalšímu prohřátí a lepšímu prokrvení. Doporučuje se absolvovat minimálně 5 masáží vždy po týdnu. Masáž je prováděna za studena lisovaným  kokosovým nebo slunečnicovým olejem.
+                            <br><strong>90min. / 650Kč</strong></p>
+
+
+                    </div>
+                    <aside>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <div class="sidenav">
+                                <ul class="listnone">
+                                    <li> <a href="{{ path('sm-individual') }}">SM systém – Individuální terapie</a></li>
+                                    <li> <a href="{{ path('sm-group') }}">SM systém – Skupinové lekce</a></li>
+                                    <li> <a href="{{ path('massage') }}#muscle">Masáž na uvolnění svalového napětí</a></li>
+                                    <li> <a href="{{ path('massage') }}#indian">Tradiční Indická masáž hlavy</a></li>
+                                    <li> <a href="{{ path('massage') }}#musle">Masáž horkými mušlemi</a></li>
+                                    <li> <a href="{{ path('massage') }}#anticel">Anticelulitidní masáž</a></li>
+                                    <li> <a href="{{ path('workout') }}">Zdravotní cvičení</a></li>
+                                    <li> <a href="{{ path('pilates') }}">Pilates</a></li>
+                                    <li> <a href="{{ path('coupons') }}">Dárkové kupony</a></li>
+                                </ul>
+                            </div>
+                            <div class="widget widget-call-to-action">
+                                <h1 class="widget-title">Zaujalo Vás to?</h1>
+                                <p class="text-white">Napište mi či zavolejte a můžeme si domluvit konzultaci.</p>
+                                <a href="{{ path('contact') }}" class="btn btn-white btn-lg">Kontakt</a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+                <!-- ./ROW -->
+            </div>
+            <!-- ./CONTAINER -->
+        </div>
+        <!-- ./CONTENT -->
+    </article>
+
+    <div class="space-small bg-primary">
+        <!-- call to action -->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-sm-8 col-md-8 col-xs-12">
+                    <h1 class="cta-title">Nově nabízím dárkové kupony!</h1>
+                    <p class="cta-text">Pokud máte zájem o dárkový kupon, například na masáž, stačí mi napsat a já vám ho připravím. Vyzvednout si ho můžete v provozovně na Husově náměstí. Případně Vám ho mohu zaslat. :-)</p>
+                </div>
+                <div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
+                    <a href="{{ path('contact') }}" class="btn btn-white btn-lg mt20">Kontakt</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

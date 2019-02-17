@@ -1,0 +1,170 @@
+{% extends 'layout.html.twig' %}
+{%  set menu_name = 'nabidka' %}
+
+{% set page_name = 'SM Systém - Individuální terapie' %}
+{% block title %} {{ page_name }} {% endblock %}
+
+{% block structuredData %}
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Úvod",
+                "item": "https://www.zbavtesebolestizad.cz"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Nabídka",
+                "item": "https://www.zbavtesebolestizad.cz/nabidka"
+            },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "SM Systém - Individuální terapie",
+                "item": "https://www.zbavtesebolestizad.cz/nabidka/sm-system-terapie"
+            }]
+        }
+    </script>
+{% endblock %}
+
+{% block content %}
+    <section>
+        <!-- page image -->
+        <div class="page-header-services-individual">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="page-caption">
+                            <h2 class="page-title">{{ page_name }}</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- breadcrumb -->
+        <div class="page-breadcrumb">
+            <div class="container">
+                <div class="col-lg-12">
+                    <ol class="breadcrumb">
+                        <li><a href="{{ path('index') }}">Úvod</a></li>
+                        <li><a href="{{ path('services') }}">Nabídka</a></li>
+                        <li class="active">{{ page_name }}</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-------------- Main article ------------------------------------------------------------------------------------->
+    <!----------------------------------------------------------------------------------------------------------------->
+
+    <article>
+        <!-- CONTENT -->
+        <div class="content">
+            <!-- CONTAINER -->
+            <div class="container">
+
+                <!-- ROW -->
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                        <h1>Individuální terapie</h1>
+                        <img src="/resources/images/top/sm-zaves.jpg" alt="" class="img-responsive mb30">
+
+                        <p class="lead">Individuální terapie je vhodná každého, kdo chce začít cvičit metodou SM systém buď
+                            preventivně nebo řešit problémy s pohybovým aparátem, způsobené svalovou nerovnováhou.</p>
+
+                        <h2>O co se jedná?</h2>
+                        <p>V rámci individuální konzultace probereme váš zdravotní stav, pokusíme se analyzovat
+                            příčiny vašich současných problémů, a následně budeme pracovat na jejich odstranění. K
+                            tomu nám pomůže metoda <a href="https://www.spiralstabilization.com/cz">MUDr. Richarda Smíška </a><a href="{{ path('sm-system') }}">SM systém.</a> Naučíme se cviky pro
+                            podporu posílení spirálního stabilizačního systému a budeme pracovat na získání vhodných
+                            pohybových návyků, které Vás povedou na cestě k lepší kondici a odstranění bolesti.</p>
+
+                        <p>
+                            <strong>Absolvování individuálních konzultací je doporučeno před domácím i skupinovým
+                                cvičením. <br>Po zvládnutí základní řady cviků je vhodné docházet 1 x týdně na skupinové
+                                lekce, kde probíhá opakování , přidáváme další varianty cviků a neustále
+                                kontrolujeme a opravujeme správnost jejich provedení</strong>
+                        </p>
+
+                        <h2>Jak bude probíhat první terapie?</h2>
+
+                        <ul>
+                            <li>Zavoláte nebo napíšete a domluvíme se na termínu.</li>
+                            <li>Pokud máte doporučení od lékaře, zprávy z rentgenu nebo magnetické rezonance
+                                týkající se vyšetření v souvislosti s bolestmi zad, vezměte si s sebou.</li>
+                            <li>Probereme příčiny Vašich problémů a vysvětlíme si jak Váš způsob života, sezení,
+                                chůze, zaměstnání či sport ovlivňuje stav Vašich svalů.</li>
+                            <li>Vysvětlíme si základní principy SM systému.</li>
+                            <li>Uděláme vstupní diagnostiku vašeho svalového aparátu.</li>
+                            <li>Dále Vás čeká <a href="{{ path('massage') }}#muscle">masáž na uvolnění svalového napětí </a>na lehátku ,v závěsném systému.</li>
+                            <li>A pak už budeme se budeme učit základní cviky SM systém.</li>
+                        </ul>
+                        <p></p>
+
+                        <h2>Kolik to bude stát?</h2>
+                        <p>Délka jedné terapie cca. 60 minut, cena 500 Kč</p>
+
+                        <h2>Kde se nachází provozovna?</h2>
+                        <p>Na Husově náměstí v centru Rakovníku v budově Lékařského domu. Provozovna se nachází
+                            ve 3. patře. V budově je výtah. Pokud jedete autem, můžete zaparkovat přímo na náměstí.</p>
+
+                        <img src="/resources/images/post/large/individual-1.jpg"  class="alignleft mb30">
+                        <img src="/resources/images/post/large/individual-2.jpg"  class="alignleft mb30">
+                        <img src="/resources/images/post/large/individual-3.jpg"  class="alignleft mb30">
+                        <img src="/resources/images/post/large/individual-4.jpg"  class="alignleft mb30">
+                    </div>
+
+                    <aside>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <div class="sidenav">
+                                <ul class="listnone">
+                                    <li> <a href="{{ path('sm-individual') }}">SM systém – Individuální terapie</a></li>
+                                    <li> <a href="{{ path('sm-group') }}">SM systém – Skupinové lekce</a></li>
+                                    <li> <a href="{{ path('massage') }}#muscle">Masáž na uvolnění svalového napětí</a></li>
+                                    <li> <a href="{{ path('massage') }}#indian">Tradiční Indická masáž hlavy</a></li>
+                                    <li> <a href="{{ path('massage') }}#musle">Masáž horkými mušlemi</a></li>
+                                    <li> <a href="{{ path('massage') }}#anticel">Anticelulitidní masáž</a></li>
+                                    <li> <a href="{{ path('workout') }}">Zdravotní cvičení</a></li>
+                                    <li> <a href="{{ path('pilates') }}">Pilates</a></li>
+                                    <li> <a href="{{ path('coupons') }}">Dárkové kupony</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="widget widget-call-to-action">
+                                <h1 class="widget-title">Zajímá vás více teorie?</h1>
+                                <p class="text-white">Přečtěte si článek o SM Systému.</p>
+
+                                <a href="{{ path('sm-system') }}" class="btn btn-white btn-lg">Číst více</a>
+                            </div>
+
+                        </div>
+                    </aside>
+                </div>
+                <!-- ./ROW -->
+            </div>
+            <!-- ./CONTAINER -->
+        </div>
+        <!-- ./CONTENT -->
+    </article>
+
+    <div class="space-small bg-primary">
+        <!-- call to action -->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-sm-8 col-md-8 col-xs-12">
+                    <h1 class="cta-title">Zaujalo Vás to?</h1>
+                    <p class="cta-text">Napište mi či zavolejte a můžeme si domluvit konzultaci.</p>
+                </div>
+                <div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
+                    <a href="{{ path('contact') }}" class="btn btn-white btn-lg mt20">Kontakt</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,3 @@
+swiftmailer:
+    url: 'smtp://smtp-197974.m74.wedos.net:587?encryption=tls&username=info@zbavtesebolestizad.cz&password=MargotkaBota2000?!'
+    spool: { type: 'memory' }

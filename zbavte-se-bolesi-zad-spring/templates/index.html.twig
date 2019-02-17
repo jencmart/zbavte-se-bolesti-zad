@@ -1,0 +1,241 @@
+{% extends 'layout.html.twig' %}
+{%  set menu_name = 'index' %}
+
+{% block title %} Úvod {% endblock %}
+
+{% block content %}
+    <section>
+        <div class="hero-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <h1 class="hero-title">SM Systém - spirální stabilizace páteře</h1>
+                        <p class="hero-text">Unikátní metoda, která nabízí možnost řešení bolestí zad v krční, hrudní i bederní oblasti, skolióz a výhřezů meziobratlových plotének bez operace.</p>
+                        <a href="{{ path('sm-system') }}" class="btn btn-default">Zjistit více</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <article>
+
+    <div class="space-medium">
+        <div class="container">
+
+            <!-- ROW welcome -->
+            <div class="row">
+                <div class="col-md-offset-2 col-md-8">
+                    <div class="mb60 text-center section-title">
+                        <!-- section title start-->
+                        <header>
+                            <h1>Jak Vám mohu pomoci?</h1>
+                        </header>
+
+                        <p> Každý člověk během svého života přetěžuje některé části svého pohybového systému, což následně vede k bolestem a může dospět až do stavu nevratných fyziologických změn na kostech a kloubech.
+                            Díky cíleným léčebným manuálním technikám a přístupům pomohu vašemu tělu efektivním způsobem zvládnout nároky vašeho sedavého zaměstnání, sportovních výkonů i běžného pohybu.</p>
+                    </div>
+                    <!-- /.section title start-->
+                    <div class="bdr-btm"></div>
+                </div>
+            </div>
+            <!-- ./ROW welcome -->
+
+            <!-- ROW services header -->
+            <div class="row">
+                <div class="col-md-offset-2 col-md-8">
+                    <div class="mb60 text-center section-title">
+                        <!-- section title start-->
+                        <h1>Seznam služeb</h1>
+                        <p>Nabízím celou řadu služeb která Vám mohou pomoci čelit problémům s bolestmi zad.</p>
+                    </div>
+                    <!-- /.section title start-->
+                </div>
+            </div>
+            <!-- ./ROW services header -->
+
+            <!-- ROW list of services -->
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="service-block">
+                        <!-- service block -->
+                        <div class="service-img mb20">
+                            <!-- service img -->
+                            <a href="{{ path('sm-individual') }}"><img src="/resources/images/service-preview/service-1.jpg" alt="" class="img-responsive"></a>
+                        </div>
+                        <!-- service img -->
+                        <div class="service-content">
+                            <!-- service content -->
+                            <h2><a href="{{ path('sm-individual') }}" class="title">SM Systém - Individuální terapie</a></h2>
+                            <p>V rámci této terapie se bude analyzovat Váš zdravotní stav a naučíte se základní cviky SM systému.</p>
+                        </div>
+                        <!-- service content -->
+                    </div>
+                    <!-- /.service block -->
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="service-block">
+                        <!-- service block -->
+                        <div class="service-img mb20">
+                            <!-- service img -->
+                            <a href="{{ path('sm-group') }}"><img src="/resources/images/service-preview/service-2.jpg" alt="" class="img-responsive"></a>
+                        </div>
+                        <!-- service img -->
+                        <div class="service-content">
+                            <!-- service content -->
+                            <h2><a href="{{ path('sm-group') }}" class="title">SM Systém - Skupinové lekce</a></h2>
+                            <p>Vhodné pro ty, kteří už ovládají základy SM systému, zahrnují trénink a korekci již naučených pohybů.</p>
+                        </div>
+                        <!-- service content -->
+                    </div>
+                    <!-- /.service block -->
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="service-block">
+                        <!-- service block -->
+                        <div class="service-img mb20">
+                            <!-- service img -->
+                            <a href="{{ path('massage') }}"><img src="/resources/images/service-preview/service-3.jpg" alt="" class="img-responsive"></a>
+                        </div>
+                        <!-- service img -->
+                        <div class="service-content">
+                            <!-- service content -->
+                            <h2><a href="{{ path('massage') }}" class="title">Masáže</a></h2>
+                            <p>Široká škála profesionálních masáží, ať už zdravotní se zaměřením na problémy které Vás trápí, či relaxační, které Vám pomohou uvolnit napětí a stres.</p>
+                        </div>
+                        <!-- service content -->
+                    </div>
+                    <!-- /.service block -->
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="service-block">
+                        <!-- service block -->
+                        <div class="service-img mb20">
+                            <!-- service img -->
+                            <a href="{{ path('workout') }}"><img src="/resources/images/service-preview/service-4.jpg" alt="" class="img-responsive"></a>
+                        </div>
+                        <!-- service img -->
+                        <div class="service-content">
+                            <!-- service content -->
+                            <h2><a href="{{ path('workout') }}" class="title">Zdravotní cvičení</a></h2>
+                            <p>Skupinová cvičení s individuálním přístupem. Obsahuje mobilizaci kloubů, lehké posilování ochablých svalů a protažení zkrácených.</p>
+                        </div>
+                        <!-- service content -->
+                    </div>
+                    <!-- /.service block -->
+                </div>
+            </div>
+            <!-- ./ROW list of services -->
+        </div>
+    </div>
+    </article>
+
+    <article>
+        <!-- DOMLUVTE SI KONZULTACI -->
+        <div class="space-small bg-primary">
+            <!-- call to action -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-sm-8 col-md-8 col-xs-12">
+                        <h1 class="cta-title">Domluvit konzultaci</h1>
+                        <p class="cta-text"> Domluvte si konzultaci kde probereme Vaše problémy a zjistíme jak je vyřešit.</p>
+                    </div>
+                    <div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
+                        <a href="{{ path('contact') }}" class="btn btn-white btn-lg mt20">Objednat</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+
+
+
+
+
+    <article>
+        <!-- References ----------------------------------------------------------------------------------------------->
+        <div class="space-small bg-default">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
+                        <div class="section-title mb60 text-center">
+                            <!-- section title start-->
+                            <h1>Co o mně řekli</h1>
+                        </div>
+                        <!-- /.section title start-->
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="testimonial-block">
+                            <!-- testimonial block -->
+                            <div class="testimonial-content">
+                                <p class="testimonial-text">“Jsem zaměstnán jako řidič a mám velké problémy s nadváhou a pohyblivostí. S pomocí lektorky jsem zhubnul 20 kilogramů, cvičím s lany a cítím se mnohem lépe. Chtěl bych jí touto cestou ještě jednou poděkovat.”</p>
+                            </div>
+                            <div class="testimonial-info">
+                                <h4 class="testimonial-name">Jan P.</h4>
+                                <span class="testimonial-meta">56 let</span>
+                            </div>
+                        </div>
+                        <!--/. testimonial block -->
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="testimonial-block">
+                            <!-- testimonial block -->
+                            <div class="testimonial-content">
+                                <p class="testimonial-text">“Jako programátor často sedím u PC a to v ne úplně ideální pozici. Cvičení v posilovně mi moc nepomáhalo, někdy to bylo po tréninku i horší. Jarmila mi pomohla od bolestí. Teď chodím i do posilovny, ale každý den navíc cvičím chvíli  kompenzaci s lany SM Systém. Musím uznat že je to vynikající cvičení, které mi pomohlo.”</p>
+                            </div>
+                            <div class="testimonial-info">
+                                <h4 class="testimonial-name">Martin J.</h4>
+                                <span class="testimonial-meta">26 let</span>
+                            </div>
+                        </div>
+                        <!--/. testimonial block -->
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="testimonial-block">
+                            <!-- testimonial block -->
+                            <div class="testimonial-content">
+                                <p class="testimonial-text">“Jsem studentka vysoké školy a často sedím u učení nebo u počítače. Poslední dva roky mě začala čím dál tím víc bolet záda. Nakonec mě bolela už každý den. Paní terapeutka mě naučila jak správně držet tělo a jak správně cvičit podporu páteře. Moje problémy postupně ustoupily.”</p>
+                            </div>
+                            <div class="testimonial-info">
+                                <h4 class="testimonial-name">Zlata K.</h4>
+                                <span class="testimonial-meta">20 let</span>
+                            </div>
+                        </div>
+                        <!--/. testimonial block -->
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </article>
+
+
+    <!-- Kde me najdete -->
+    <div class="space-small ">
+        <!-- call to action -->
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-8 col-sm-8 col-md-8 col-xs-12">
+                    <h1 class="mb20">Kde mě najdete?</h1>
+                    <p> Sídlím na Husově náměstí v centru Rakovníku v budově Lékařského domu. Provozovna se nachází ve 3. patře. Pokud jedete autem, můžete zaparkovat přímo na náměstí.</p>
+                </div>
+            </div>
+            <div class="bdr-btm"></div>
+
+            <div class="row">
+                    <iframe src="https://www.google.com/maps?q=Husovo%20N%C3%A1m%C4%9Bst%C3%AD%202347%2C%2026901%20Rakovn%C3%ADk+(Mgr.%20Jarmila%20Helebrantov%C3%A1%20-%20SM%20Syst%C3%A9m)&amp;ie=UTF8&amp;t=&amp;z=17&amp;iwloc=A&amp;output=embed" width="100%" height="400" frameborder="0"></iframe>
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

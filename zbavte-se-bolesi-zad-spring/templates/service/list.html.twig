@@ -1,0 +1,199 @@
+{% extends 'layout.html.twig' %}
+{%  set menu_name = 'nabidka' %}
+
+{% set page_name = 'Nabídka' %}
+{% block title %} {{ page_name }} {% endblock %}
+
+
+{% block structuredData %}
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Úvod",
+            "item": "https://www.zbavtesebolestizad.cz"
+        },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Nabídka",
+            "item": "https://www.zbavtesebolestizad.cz/nabidka"
+        }]
+    }
+</script>
+{% endblock %}
+
+{% block content %}
+
+    <!----------- CONTENT ----------->
+    <section>
+        <!-- page image -->
+        <div class="page-header-services">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="page-caption">
+                            <h2 class="page-title">{{ page_name }}</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- breadcrumb -->
+        <div class="page-breadcrumb">
+            <div class="container">
+                <div class="col-lg-12">
+                    <ol class="breadcrumb">
+                        <li><a href="{{ path('index') }}">Úvod</a></li>
+                        <li class="active">{{ page_name }}</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!----------------------------------------------------------------------------------------------------------------->
+
+
+    <!-- main article -->
+    <article>
+        <!-- CONTENT -->
+        <div class="content">
+            <!-- CONTAINER -->
+            <div class="container">
+                <!-- ROW services header -->
+                <div class="row">
+                    <div class="col-md-offset-2 col-md-8">
+                        <div class="mb60 text-center section-title">
+                            <!-- section title start-->
+                            <h1>Seznam služeb</h1>
+                            <p>Nabízím celou řadu služeb která Vám mohou pomoci čelit problémům s bolestmi zad.</p>
+                        </div>
+                        <!-- /.section title start-->
+                    </div>
+                </div>
+                <!-- ./ROW services header -->
+
+                <!-- ROW list of services -->
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="service-block">
+                            <!-- service block -->
+                            <div class="service-img mb20">
+                                <!-- service img -->
+                                <a href="{{ path('sm-individual') }}"><img src="/resources/images/service-preview/service-1.jpg" alt="" class="img-responsive"></a>
+                            </div>
+                            <!-- service img -->
+                            <div class="service-content">
+                                <!-- service content -->
+                                <h2><a href="{{ path('sm-individual') }}" class="title">SM Systém - Individuální terapie</a></h2>
+                                <p>V rámci této terapie se bude analyzovat Váš zdravotní stav a naučíte se základní cviky SM systému.</p>
+                            </div>
+                            <!-- service content -->
+                        </div>
+                        <!-- /.service block -->
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="service-block">
+                            <!-- service block -->
+                            <div class="service-img mb20">
+                                <!-- service img -->
+                                <a href="{{ path('sm-group') }}"><img src="/resources/images/service-preview/service-2.jpg" alt="" class="img-responsive"></a>
+                            </div>
+                            <!-- service img -->
+                            <div class="service-content">
+                                <!-- service content -->
+                                <h2><a href="{{ path('sm-group') }}" class="title">SM Systém - Skupinové lekce</a></h2>
+                                <p>Vhodné pro ty, kteří už ovládají základy SM systému, zahrnují trénink a korekci již naučených pohybů.</p>
+                            </div>
+                            <!-- service content -->
+                        </div>
+                        <!-- /.service block -->
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="service-block">
+                            <!-- service block -->
+                            <div class="service-img mb20">
+                                <!-- service img -->
+                                <a href="{{ path('massage') }}"><img src="/resources/images/service-preview/service-3.jpg" alt="" class="img-responsive"></a>
+                            </div>
+                            <!-- service img -->
+                            <div class="service-content">
+                                <!-- service content -->
+                                <h2><a href="{{ path('massage') }}" class="title">Masáže</a></h2>
+                                <p>Široká škála profesionálních masáží, ať už zdravotní se zaměřením na problémy které Vás trápí, či relaxační, které Vám pomohou uvolnit napětí a stres.</p>
+                            </div>
+                            <!-- service content -->
+                        </div>
+                        <!-- /.service block -->
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="service-block">
+                            <!-- service block -->
+                            <div class="service-img mb20">
+                                <!-- service img -->
+                                <a href="{{ path('workout') }}"><img src="/resources/images/service-preview/service-4.jpg" alt="" class="img-responsive"></a>
+                            </div>
+                            <!-- service img -->
+                            <div class="service-content">
+                                <!-- service content -->
+                                <h2><a href="{{ path('workout') }}" class="title">Zdravotní cvičení</a></h2>
+                                <p>Skupinová cvičení s individuálním přístupem. Obsahuje mobilizaci kloubů, lehké posilování ochablých svalů a protažení zkrácených.</p>
+                            </div>
+                            <!-- service content -->
+                        </div>
+                        <!-- /.service block -->
+                    </div>
+
+                </div>
+                <!-- ./ROW list of services -->
+
+                <!-- second row -->
+                <br>
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="service-block">
+                            <!-- service block -->
+                            <div class="service-img mb20">
+                                <!-- service img -->
+                                <a href="{{ path('pilates') }}"><img src="/resources/images/service-preview/service-5.jpg" alt="" class="img-responsive"></a>
+                            </div>
+                            <!-- service img -->
+                            <div class="service-content">
+                                <!-- service content -->
+                                <h2><a href="{{ path('pilates') }}" class="title">Pilates</a></h2>
+                                <p>Cílem tohoto cvičení je pohyb vycházející ze silného a pevného středu těla, důraz je kladen na zpevnění hlubokých břišních svalů.</p>
+                            </div>
+                            <!-- service content -->
+                        </div>
+                        <!-- /.service block -->
+                    </div>
+                </div>
+            </div>
+            <!-- ./CONTAINER -->
+        </div>
+        <!-- ./CONTENT -->
+    </article>
+
+
+    <div class="space-small bg-primary">
+        <!-- call to action -->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-sm-8 col-md-8 col-xs-12">
+                    <h1 class="cta-title">Nově nabízím dárkové kupony!</h1>
+                    <p class="cta-text">Pokud máte zájem o dárkový kupon, například na masáž, stačí mi napsat a já vám ho připravím. Vyzvednout si ho můžete v provozovně na Husově námestí. Případně Vám ho mohu zaslat.</p>
+                </div>
+                <div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
+                    <a href="{{ path('contact') }}" class="btn btn-white btn-lg mt20">Kontakt</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!----------- END CONTENT ----------->
+{% endblock %}

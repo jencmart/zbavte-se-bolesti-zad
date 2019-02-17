@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="cz">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="Pomůžeme vám při bolestech zad ramen i kloubů!"/>
+    <meta name="keywords" content="Zbavte se bolesti, Mgr. Jarmila Helebrantova, Rakovnik, SM System, cviceni sm systemu, rehabilitace"/>
+    <meta name="author" content="Zbavte se bolesti zad"/>
+    <meta name="copyright" content="Zbavte se bolesti zad"/>
+    <meta name="robots" content="index,follow"/>
+
+    <title>{% block title %} {% endblock %} | Zbavte se bolesti zad</title>
+
+    {% block structuredData %} {% endblock %}
+
+    <!-- Bootstrap -->
+    <link href="/resources/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="/resources/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Style -->
+    <link href="/resources/css/style.css" rel="stylesheet">
+    {% block additional_css %} {%  endblock %}
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono|Roboto+Slab">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-90913913-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-90913913-2');
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    {% block additional_js %} {%  endblock %}
+</head>
+<body>
+{% macro is_active(name,segment) %}{% if  name == segment %}active{% endif %}{% endmacro %}
+
+{% import _self as macros %}
+
+
+    <!-- header-top -->
+    <div class="header-top">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <span class="text-block time-block">
+                              <!--  <span class="time-text">Po - Pá: <strong>17:00 - 22:00</strong> - : <strong>Po domluvě</strong></span> -->
+                    </span>
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-8  col-xs-12">
+                    <div class="top-text">
+                        <span class="text-block call-block">
+                               <span class="call-no">Rezervace: <strong>+420 602 162 248</strong></span>
+                        </span>
+                        <span class="text-block mail-block hidden-xs hidden-sm">
+                                <span class="mail-text">info@zbavtesebolestizad.cz</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- HLAVNI MENU + LOGO -->
+    <div class="header">
+        <div class="container">
+            <div class="row">
+
+                <!-- LOGO -->
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <a href="{{ path('index') }}"><img src="/resources/images/logo.svg" alt=""  width="330"></a>
+                </div>
+
+                <div class="col-lg-8 col-md-4 col-sm-12 col-xs-12">
+                    <div class="navigation">
+                        <nav>
+                            <div id="navigation">
+                                <ul>
+                                    <li class="{{ macros.is_active(menu_name,'index') }}"><a href="{{ path('index') }}" title="Úvod">Úvod</a></li>
+                                    <li class="{{ macros.is_active(menu_name,'sm-system') }}"><a href="{{ path('sm-system') }}" title="Články">SM Systém</a></li>
+                                    <li class="has-sub {{ macros.is_active(menu_name,'nabidka') }}"><a href="{{ path('services') }}" title="Nabídka">Nabídka</a>
+                                        <ul>
+                                            <li><a href="{{ path('sm-individual') }}" title="SM Systém - Individuální terapie" >Individuální terapie</a></li>
+                                            <li><a href="{{ path('sm-group') }}" title="SM Systém - Skupinové lekce" >Skupinové lekce</a></li>
+                                            <li><a href="{{ path('massage') }}" title="Masáže" >Masáže</a></li>
+                                            <li><a href="{{  path('workout') }}" title="Zdravotní cvičení" >Zdravotní cvičení</a></li>
+                                            <li><a href="{{  path('pilates') }}" title="Pilates" >Pilates</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="{{ macros.is_active(menu_name,'kontakt') }}"><a href="{{ path('contact') }}" title="Kontakt">Kontakt</a> </li>
+                                    <li class="{{ macros.is_active(menu_name,'info') }}"><a href="{{ path('about') }}" title="O mně">O mně</a> </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<main>
+    {% block content %}
+    {% endblock %}
+</main>
+
+<aside>
+    {% block aside %}
+    {% endblock %}
+</aside>
+
+<footer>
+
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- SLUZBY -->
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="footer-widget">
+                        <h2 class="widget-title">Služby</h2>
+                        <ul class="listnone">
+                            <li><a href="{{ path('sm-individual') }}">Individální terapie (SM systém)</a></li>
+                            <li><a href="{{ path('sm-group') }}">Skupinové lekce (SM systém)</a></li>
+                            <li><a href="{{ path('massage') }}">Masáže</a></li>
+                            <li><a href="{{ path('workout') }}">Zdravotní cvičení</a></li>
+                            <li><a href="{{ path('pilates') }}">Pilates</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- SOCIALNI FEED -->
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="footer-widget footer-social">
+                        <h2 class="widget-title">Masáže</h2>
+                        <ul class="listnone">
+                            <li><a href="{{ path('massage') }}#muscle"> <i class=""></i> Uvolnění svalového napětí</a></li>
+                            <li><a href="{{ path('massage') }}#indian"> <i class=""></i> Indická masáž hlavy</a></li>
+                            <li><a href="{{ path('massage') }}#musle"> <i class=""></i> Masáž horkými mušlemi</a></li>
+                            <li><a href="{{ path('massage') }}#anticel"> <i class=""></i> Anticelulitidní masáž</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ADRESA -->
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="footer-widget footer-social">
+                        <h2 class="widget-title">Kontakt</h2>
+                        <ul class="listnone contact">
+                            <li><a href="https://goo.gl/maps/ZVigPxU27NC2" target="_blank"><i class="fa fa-map-marker"></i>Husovo Náměstí2347, 269 01 Rakovník</a></li>
+                            <li><a href="https://www.facebook.com/Zbavte-se-bolesti-zad-Mgr-Jarmila-Helebrantov%C3%A1-1844011299226154/" target="_blank"><i class="fa fa-facebook"></i>Facebook</a></li>
+                            <li><i class="fa fa-phone"></i> +420 602 162 248</li>
+                            <li><i class="fa fa-envelope-o"></i> info@zbavtesebolestizad.cz</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- TINY FOOTER -->
+    <div class="tiny-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="copyright-content">
+                        <p>© Zbavte se bolesti zad 2018  |  Všechna práva vyhrazena </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+<!-- jQuery -->
+<script src="/resources/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/resources/js/bootstrap.min.js"></script>
+<script src="/resources/js/menumaker.js"></script>
+
+<script src="/resources/js/jquery.sticky.js"></script>
+<script src="/resources/js/sticky-header.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+{% extends 'layout.html.twig' %}
+{%  set menu_name = 'kontakt' %}
+
+{% set page_name = 'Kontakt' %}
+{% block title %} {{ page_name }} {% endblock %}
+
+{% block structuredData %}
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Úvod",
+                "item": "https://www.zbavtesebolestizad.cz"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Kontakt",
+                "item": "https://www.zbavtesebolestizad.cz/kontakt"
+            }]
+        }
+    </script>
+{% endblock %}
+
+{% block content %}
+    <!----------- CONTENT ----------->
+    <section>
+        <!-- page image -->
+        <div class="page-header-contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="page-caption">
+                            <h2 class="page-title">{{ page_name }}</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- breadcrumb -->
+        <div class="page-breadcrumb">
+            <div class="container">
+                <div class="col-lg-12">
+                    <ol class="breadcrumb">
+                        <li><a href="{{ path('index') }}">Úvod</a></li>
+                        <li class="active">{{ page_name }}</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Article -->
+    <article>
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="widget widget-contact">
+                            <!-- widget search -->
+                            <h3 class="widget-title">Kontaktní Informace</h3>
+                            <address>
+                                <strong>Zbavte se bolesti zad</strong><br>
+                                Lékařský dům - 3. patro - dveře č. 306<br>
+                                Husovo Náměstí  2347<br>
+                                269 01  Rakovík<br>
+                            </address>
+
+                            <address>
+                                <strong>Mgr. Jarmila Helebrantová</strong><br>
+                                <a href="mailto:#">info@zbavtesebolestizad.cz</a><br>
+                                <abbr title="Phone">T:</abbr> +420 602 162 248
+                            </address>
+
+                            <address>
+                                <strong>Otevírací doba:</strong><br>
+                                Na základě telefonické domluvy :-)
+                            </address>
+
+                        </div>
+                        <!-- /.widget search -->
+                        <div class="widget widget-social">
+
+                            <div class="social-circle">
+                                <a href="https://www.facebook.com/Zbavte-se-bolesti-zad-Mgr-Jarmila-Helebrantov%C3%A1-1844011299226154/ " target="_blank" class="#"><i class="fa fa-facebook"></i></a>
+                                <!-- <a href="#" class="#"><i class="fa fa-google-plus"></i></a>
+                                 <a href="#" class="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#" class="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#" class="#"><i class="fa fa-youtube-play"></i></a> -->
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+
+                        <div class="row">
+                            {% include 'flash_messages.html.twig' %}
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <h1>Kontaktní Formulář</h1>
+                                <p> Prosím vyplňte následující formulář. Popište co Vás trápí nebo s čím bychom Vám mohli pomoci. Uděláme vše pro to abychom Vám odpověděli co nejdříve to bude možné.</p>
+
+                                {{ form_start(muj_form) }}
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="control-label" for="contact_name">Jméno</label>
+                                        {{ form_row(muj_form.name, { 'attr': {'class': 'form-control'} }) }}
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="control-label" for="contact_email">Email</label>
+                                        {{ form_row(muj_form.email, { 'attr': {'class': 'form-control' } }) }}
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <label class="control-label" for="contact_message">Zpráva</label>
+                                        {{ form_row(muj_form.message, { 'attr': {'class': 'form-control' , 'rows':'6'} }) }}
+                                        <input id="singlebutton" type="submit" name="singlebutton" class="btn btn-default" value="Odeslat zprávu">
+                                    </div>
+
+                                </div>
+                                {{ form_end(muj_form) }}
+
+                            </div>
+                        </div>
+                        <div class="row">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </article>
+
+
+    <div class="row" style="margin: 0;padding: 0;border: 0">
+        <iframe src="https://www.google.com/maps?q=Husovo%20N%C3%A1m%C4%9Bst%C3%AD%202347%2C%2026901%20Rakovn%C3%ADk+(Mgr.%20Jarmila%20Helebrantov%C3%A1%20-%20SM%20Syst%C3%A9m)&amp;ie=UTF8&amp;t=&amp;z=17&amp;iwloc=A&amp;output=embed" width="100%" height="500" frameborder="0"></iframe>
+    </div>
+
+    <!----------- END CONTENT ----------->
+{% endblock %}
